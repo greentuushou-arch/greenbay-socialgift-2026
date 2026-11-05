@@ -5,7 +5,15 @@
   var ITEM_BASE = 'https://item.rakuten.co.jp/manuka/';
   var GIFT_QUERY = '/?gift=social'; // ソーシャルギフト購入への導線
 
-  // いずれも isSocialGift:true を確認済み(2026/11/5)。店舗の対応商品はこの4点のみ
+  var POINT = 500;
+
+  // マヌカキャンディー(メール便)。2026/11/5時点 isSocialGift:false。対応後に未対応の注記を削除する
+  var CANDIES = [
+    { id: 'c016', say: '最近どう？<br>元気にしてる？', umf: '10', mgo: 'MGO261+', price: 1080 },
+    { id: 'c017', say: 'この前は<br>ありがとう！', umf: '15', mgo: 'MGO512+', price: 1620 }
+  ];
+
+  // いずれも isSocialGift:true を確認済み(2026/11/5)
   var ITEMS = [
     { id: 'pm08', say: '最近どう？<br>元気にしてる？', who: 'はじめて贈るなら', name: 'マヌカハニー', umf: '8', mgo: 'MG180+', price: '3,980' },
     { id: 'gb10', say: 'いつもありがとう。<br>体に気をつけてね', who: '離れて暮らす家族に', name: 'プレミアムマヌカハニー', umf: '10', mgo: 'MGO261+', price: '4,930' },
@@ -15,9 +23,9 @@
 
   // FVのスマホ内で流す会話
   var CHATS = [
-    { to: 'お母さん', time: '19:30', say: '寒くなってきたね。<br>元気にしてる？<br>体に気をつけてね😊', img: 'gb10', reply: 'ありがとう！<br>毎朝ひとさじ食べるね😊' },
-    { to: '佐藤先輩', time: '20:15', say: '先日はありがとうございました。<br>お忙しそうですが<br>お元気ですか？', img: 'gb15', reply: 'わざわざありがとう！<br>これ気になってたやつ😊' },
-    { to: 'ゆか', time: '21:05', say: '誕生日おめでとう🎂<br>最近どう？元気？<br>いいはちみつ見つけたよ🍯', img: 'pm08', reply: 'うれしい！<br>さっそく朝ごはんに😂' }
+    { to: 'お母さん', time: '19:30', say: '寒くなってきたね。<br>元気にしてる？<br>体に気をつけてね😊', img: 'c016', reply: 'ありがとう！<br>バッグに入れておくね😊' },
+    { to: '佐藤先輩', time: '20:15', say: '先日はありがとうございました。<br>お忙しそうですが<br>お元気ですか？', img: 'c017', reply: 'わざわざありがとう！<br>これ気になってたやつ😊' },
+    { to: 'ゆか', time: '21:05', say: '誕生日おめでとう🎂<br>最近どう？元気？<br>いいはちみつ飴見つけたよ🍯', img: 'c016', reply: 'うれしい！<br>さっそく持ち歩くね😂' }
   ];
 
   var TIMING = { typing: 900, gift: 900, reply: 1100, hold: 2800 };
@@ -47,6 +55,28 @@
     return a;
   }
 
+  function yen(n) { return n.toLocaleString('ja-JP'); }
+
+  function candyCard(c) {
+    var a = el('a', 'candy-item');
+    a.href = ITEM_BASE + c.id + GIFT_QUERY;
+    a.innerHTML =
+      '<p class="item-say">' + c.say + '</p>' +
+      '<div class="candy-img"><img src="img/' + c.id + '.jpg" alt="マヌカキャンディー UMF' + c.umf + '+" width="720" height="720"></div>' +
+      '<div class="candy-body">' +
+        '<p class="item-umf"><span>UMF</span><b>' + c.umf + '+</b></p>' +
+        '<p class="item-name">マヌカキャンディー<br>' + c.mgo + ' 6粒</p>' +
+        '<p class="candy-price"><b>' + yen(c.price) + '</b>円 <small>送料無料</small></p>' +
+        '<p class="candy-real"><span>実質</span><b>' + yen(c.price - POINT) + '</b>円</p>' +
+      '</div>';
+    return a;
+  }
+
+  function renderCandies() {
+    var list = document.getElementById('candyList');
+    CANDIES.forEach(function (c) { list.appendChild(candyCard(c)); });
+  }
+
   function renderItems() {
     var list = document.getElementById('itemList');
     ITEMS.forEach(function (item) { list.appendChild(itemCard(item)); });
@@ -55,7 +85,7 @@
   function giftBubble(c) {
     return el('div', 'msg-gift',
       '<img src="img/' + c.img + '.jpg" alt="">' +
-      '<p>マヌカハニーのギフトが届きました</p><span>ギフトを受け取る</span>');
+      '<p>マヌカキャンディーのギフトが届きました</p><span>ギフトを受け取る</span>');
   }
 
   function showChatStatic(chat, c) {
@@ -156,6 +186,7 @@
     timer = setInterval(tick, SECOND_MS);
   }
 
+  renderCandies();
   renderItems();
   startChat();
   startReveal();
