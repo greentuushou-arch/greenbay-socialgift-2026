@@ -125,7 +125,6 @@ br.sp{display:inline}
 .candy-real b{font-family:"Jost",sans-serif;font-size:min(8.6vw,40px);font-weight:600}
 .candy-pack{margin-top:14px;padding:11px 14px;background:var(--white);border:2px solid var(--orange);border-radius:10px;font-size:15px;line-height:1.5}
 .candy-pack b{display:block;font-size:18px;font-weight:700;color:var(--orange-deep)}
-.candy-note{margin-top:12px;padding-left:10px;border-left:3px solid var(--rakuten-deep);font-size:14px;font-weight:500;line-height:1.6}
 
 /* スマホ */
 .fv-stage{margin:36px auto 0;max-width:330px}
@@ -308,7 +307,6 @@ br.sp{display:inline}
   .candy-real b{font-size:52px}
   .candy-pack{display:flex;align-items:baseline;gap:1.4em;padding:13px 22px;font-size:17px}
   .candy-pack b{font-size:21px}
-  .candy-note{font-size:15px}
   .fv-copy{grid-column:1;grid-row:1}
   .fv-stage{margin:0;max-width:none;grid-column:2;grid-row:1}
   .phone{height:500px}

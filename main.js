@@ -7,7 +7,7 @@
 
   var POINT = 500;
 
-  // マヌカキャンディー(メール便)。2026/11/5時点 isSocialGift:false。対応後に未対応の注記を削除する
+  // マヌカキャンディー(メール便)
   var CANDIES = [
     { id: 'c016', say: '最近どう？<br>元気にしてる？', umf: '10', mgo: 'MGO261+', price: 1080 },
     { id: 'c017', say: 'この前は<br>ありがとう！', umf: '15', mgo: 'MGO512+', price: 1620 }
