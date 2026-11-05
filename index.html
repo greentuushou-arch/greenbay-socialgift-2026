@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>その「元気？」にマヌカハニーを添えて｜グリーンベイ ソーシャルギフト</title>
+<meta name="description" content="住所を知らなくても、LINEやメールでマヌカハニーが贈れる楽天ソーシャルギフト。はじめて贈ると500ポイントもらえるキャンペーン開催中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Jost:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside class="event" aria-label="楽天ソーシャルギフト デビューキャンペーン">
+  <div class="event-inner">
+    <div class="event-lead">
+      <p class="event-name">楽天ソーシャルギフト デビューキャンペーン</p>
+      <p class="event-title">ソーシャルギフトを<br class="sp">贈りませんか<span class="event-now">キャンペーン中</span></p>
+      <p class="event-point">はじめて贈ると<b class="en-num">500</b>ポイント</p>
+    </div>
+    <div class="event-foot">
+      <p class="event-date"><span>12月1日（火）9:59まで</span><span class="event-left" id="eventLeft" hidden></span></p>
+      <a class="event-btn" href="https://event.rakuten.co.jp/gift/socialgift/debut/">エントリーはこちら</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ファーストビュー: 「元気？」のトーク画面 -->
+<section class="fv">
+  <header class="top">
+    <a href="https://www.rakuten.co.jp/manuka/"><span class="en-num">GREEN BAY</span><small>マヌカハニー専門店</small></a>
+  </header>
+  <div class="fv-inner">
+    <div class="fv-copy">
+      <h1>その「元気？」に<br>マヌカハニーを<br class="sp">添えて</h1>
+      <p class="fv-lead">住所を知らなくても<br class="sp">LINEやメールで贈れます</p>
+      <div class="deal">
+        <div class="hex"><b class="en-num">500</b><span>ポイント</span></div>
+        <p class="deal-text"><b>はじめて贈ると<br>もらえます</b><span>1,000円以上の<br class="sp">ソーシャルギフト＋エントリーで</span></p>
+      </div>
+      <a class="btn pc" href="#items">贈る1本を選ぶ</a>
+    </div>
+    <div class="fv-stage">
+      <div class="phone" aria-hidden="true">
+        <div class="phone-head"><span id="chatName">お母さん</span><time id="chatTime">19:30</time></div>
+        <div class="phone-chat" id="chat"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- なぜマヌカハニーなのか -->
+<section class="why">
+  <svg class="drip" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1200V22C1160 24 1150 58 1120 58S1086 26 1040 24 980 30 950 32 920 84 884 84 852 34 800 28 700 24 660 26 630 62 600 62 572 30 520 26 400 22 360 26 332 74 298 74 268 30 220 26 120 22 90 28 66 50 44 50 20 24 0 22Z"/></svg>
+  <div class="why-inner">
+    <h2 class="reveal">自分ではなかなか<br class="sp">買わないから<br>贈ると喜ばれます</h2>
+    <ol>
+      <li class="reveal">
+        <span class="en-num" aria-hidden="true">1</span>
+        <div><h3>気になっていた1本を<br>代わりに贈れる</h3><p>気になっていても、自分用には少し迷う価格。だからこそ、誰かから届くとうれしい贈り物です。</p></div>
+      </li>
+      <li class="reveal">
+        <span class="en-num" aria-hidden="true">2</span>
+        <div><h3>瓶を持ち歩かせない</h3><p>手渡しだと、重くて割れものの瓶が帰りの荷物に。ソーシャルギフトなら、相手の家へ直接届きます。</p></div>
+      </li>
+      <li class="reveal">
+        <span class="en-num" aria-hidden="true">3</span>
+        <div><h3>住所を聞かなくていい</h3><p>職場の人にも、SNSでつながった友だちにも。リンクを送るだけで、お届け先は相手が自分で入力します。</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 商品 -->
+<section class="items" id="items">
+  <div class="items-inner">
+    <div class="items-head reveal">
+      <h2>どんなひとことと<br class="sp">いっしょに贈りますか</h2>
+      <p>すべて250g入り。ひとことに合わせて、4種類から選べます。</p>
+    </div>
+    <div class="item-list" id="itemList"></div>
+    <p class="items-note reveal">UMFとMGOの数字は、マヌカハニーの等級の目安です。</p>
+  </div>
+</section>
+
+<!-- 品質 -->
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-img reveal"><img src="img/product-hero.jpg" alt="スプーンからとろりと落ちるマヌカハニーとグリーンベイの瓶" width="1200" height="959" loading="lazy"></div>
+    <div class="trust-text reveal">
+      <h2>贈りものだから<br>専門店の1本を</h2>
+      <dl>
+        <div><dt class="en-num">2000<small>年から</small></dt><dd>毎年ニュージーランドの産地を視察</dd></div>
+        <div><dt class="en-num">30<small>社以上</small></dt><dd>これまでに訪れた現地の生産者・メーカー</dd></div>
+        <div><dt class="en-num">4.91</dt><dd>楽天市場のショップ評価（7,449件）</dd></div>
+      </dl>
+      <p class="trust-note">UMF協会認定品。小さじ1杯（5g）で、1瓶およそ50杯分です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 500ポイント -->
+<section class="point" id="point">
+  <div class="point-inner">
+    <h2 class="reveal">どの1本を贈っても<br><span class="en-num">500</span>ポイント</h2>
+    <p class="point-lead reveal">はじめてのソーシャルギフトなら<br class="sp">贈ったあなたに500ポイント</p>
+    <ol class="flow reveal">
+      <li><span class="en-num">1</span><b>エントリーする</b></li>
+      <li><span class="en-num">2</span><b>マヌカハニーを贈る</b></li>
+      <li><span class="en-num">3</span><b>相手が受け取る</b></li>
+      <li class="flow-goal"><div class="hex"><b class="en-num">500</b><span>ポイント</span></div><b>贈ったあなたに</b></li>
+    </ol>
+    <div class="cond">
+      <h3 class="reveal">対象になるのは<br>こんな方</h3>
+      <ul>
+        <li class="reveal"><b>ソーシャルギフトがはじめて</b><span>楽天市場で購入したことがない方</span></li>
+        <li class="reveal"><b>お買い物の前にエントリー</b><span>エントリー前の購入は対象外です</span></li>
+        <li class="reveal"><b>1注文1,000円（税込）以上</b><span>クーポン利用後・送料別の金額です</span></li>
+        <li class="reveal"><b>相手がギフトを受け取る</b><span>受け取りが完了した注文が対象です</span></li>
+      </ul>
+    </div>
+    <a class="btn reveal" href="https://event.rakuten.co.jp/gift/socialgift/debut/">楽天のページでエントリー</a>
+  </div>
+</section>
+
+<!-- 贈り方 -->
+<section class="steps">
+  <div class="steps-inner">
+    <div class="steps-head reveal">
+      <h2>住所は聞かなくて<br class="sp">大丈夫です</h2>
+      <p>リンクを送るだけ。お届け先は、受け取る方がご自身で入力します。</p>
+    </div>
+    <ol class="step-list">
+      <li class="reveal"><span class="en-num">1</span><div><b>商品ページでチェック</b><p>「ソーシャルギフトで贈る」にチェックを入れて、買い物かごへ。</p></div></li>
+      <li class="reveal"><span class="en-num">2</span><div><b>注文してリンクをコピー</b><p>注文を確定したら「ギフト受け取り用リンクをコピー」を押します。</p></div></li>
+      <li class="reveal"><span class="en-num">3</span><div><b>「元気？」を添えて送る</b><p>LINEやメールでリンクを送ります。相手が受け取り手続きをすると、ギフトが発送されます。</p></div></li>
+    </ol>
+    <a class="text-link reveal" href="https://event.rakuten.co.jp/gift/socialgift/guide/">くわしい使い方を楽天のページで見る</a>
+  </div>
+</section>
+
+<!-- 締め: 届いたあとの朝 -->
+<section class="close">
+  <div class="close-inner">
+    <div class="close-chat reveal" aria-hidden="true">
+      <time>7:30</time>
+      <p>おはよう！<br>毎朝ひとさじ 食べてるよ😊</p>
+    </div>
+    <h2>今日の「元気？」に<br>ひとさじ添えてみませんか</h2>
+    <p>キャンペーンは12月1日（火）9:59まで</p>
+    <a class="btn" href="#items">贈る1本を選ぶ</a>
+  </div>
+</section>
+
+<!-- 注意事項 -->
+<section class="notes">
+  <div class="notes-inner">
+    <h2>ご注意ください</h2>
+    <ul>
+      <li>はちみつは加熱殺菌していないため、1歳未満の赤ちゃんにはあげないでください。</li>
+      <li>本品は食品であり、効果・効能を表示するものではありません。</li>
+      <li>本キャンペーンは楽天市場が実施する「楽天ソーシャルギフトデビューで500ポイントプレゼント！」です。対象期間は2026年11月2日(月)10:00〜12月1日(火)9:59です。</li>
+      <li>対象は、エントリー時点で楽天市場のソーシャルギフトを購入したことがない楽天会員の方です。特典は対象期間中1回までです。</li>
+      <li>1注文あたり1,000円（税込・送料別・クーポン適用後）以上のお買い物が対象です。</li>
+      <li>ポイントが付与されるのは、受け取り主ではなくギフトを贈った方です。受け取り手続きが完了した注文のみ対象です。</li>
+      <li>特典は期間限定ポイントで、2027年1月15日(金)頃に付与予定、有効期限は2027年2月28日(日)23:59です。</li>
+      <li>受け取り期限までに手続きがない場合、注文は自動でキャンセルされ、返金手続きとなります。期限の延長はできません。</li>
+      <li>楽天のサイトやメールでは受け取り主の名前・住所は贈り主に開示されませんが、ショップからのメールや配送伝票で開示される場合があります。</li>
+      <li>キャンペーンの内容は変更・中止される場合があります。最新の条件は<a href="https://event.rakuten.co.jp/gift/socialgift/debut/">楽天のキャンペーンページ</a>をご確認ください。</li>
+      <li>掲載の価格は1個の価格で、2026年11月5日時点のものです。ショップ評価も同日時点の数字です。</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="foot">
+  <a href="https://www.rakuten.co.jp/manuka/"><span class="en-num">GREEN BAY</span></a>
+  <p>マヌカハニー専門 グリーンベイ 楽天市場店</p>
+</footer>
+
+<a class="float-cta" id="floatCta" href="https://event.rakuten.co.jp/gift/socialgift/debut/">お買い物の前にエントリー</a>
+
+<script src="main.js"></script>
+</body>
+</html>
